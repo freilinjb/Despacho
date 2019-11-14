@@ -33,7 +33,6 @@ namespace Despacho.Vistas
         {
             // TODO: esta línea de código carga datos en la tabla 'despachoDataSet.Categoria' Puede moverla o quitarla según sea necesario.
             this.categoriaTableAdapter.Fill(this.despachoDataSet.Categoria);
-
         }
     }
 }
