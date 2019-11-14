@@ -1,6 +1,6 @@
 ﻿namespace Despacho.Vistas
 {
-    partial class Producto
+    partial class MantenimientoPorCategoria
     {
         /// <summary>
         /// Required designer variable.
@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn15 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn15 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn16 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn16 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition8 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn5 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn6 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
+            this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btCancelar = new Telerik.WinControls.UI.RadButton();
             this.btGuardar = new Telerik.WinControls.UI.RadButton();
@@ -41,8 +43,6 @@
             this.dataPropietario = new Telerik.WinControls.UI.RadGridView();
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
             this.cbbPersonal1 = new Negocios.Componentes.CbbPersonal();
-            this.unidadBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.despachoDataSet = new Despacho.DespachoDataSet();
             this.txtCodigo = new Negocios.Componentes.TextPersonal();
             this.txtDescripcion = new Negocios.Componentes.TextPersonal();
             this.chEstado = new Telerik.WinControls.UI.RadToggleSwitch();
@@ -50,11 +50,11 @@
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
             this.radSeparator1 = new Telerik.WinControls.UI.RadSeparator();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
-            this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
-            this.unidadTableAdapter = new Despacho.DespachoDataSetTableAdapters.UnidadTableAdapter();
+            this.despachoDataSet = new Despacho.DespachoDataSet();
+            this.categoriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.categoriaTableAdapter = new Despacho.DespachoDataSetTableAdapters.CategoriaTableAdapter();
             this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productoTableAdapter = new Despacho.DespachoDataSetTableAdapters.ProductoTableAdapter();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btCancelar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btGuardar)).BeginInit();
@@ -65,8 +65,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).BeginInit();
             this.radPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbbPersonal1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.unidadBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.despachoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chEstado)).BeginInit();
@@ -74,8 +72,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.despachoDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,7 +90,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(146, 117);
-            this.tableLayoutPanel1.TabIndex = 14;
+            this.tableLayoutPanel1.TabIndex = 17;
             // 
             // btCancelar
             // 
@@ -102,7 +101,6 @@
             this.btCancelar.TabIndex = 1;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.ThemeName = "VisualStudio2012Light";
-            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
             // btGuardar
             // 
@@ -124,7 +122,7 @@
             this.radGroupBox1.Location = new System.Drawing.Point(12, 135);
             this.radGroupBox1.Name = "radGroupBox1";
             this.radGroupBox1.Size = new System.Drawing.Size(681, 447);
-            this.radGroupBox1.TabIndex = 13;
+            this.radGroupBox1.TabIndex = 16;
             this.radGroupBox1.Text = "Lista de Producto";
             this.radGroupBox1.ThemeName = "VisualStudio2012Light";
             // 
@@ -145,46 +143,69 @@
             this.dataPropietario.MasterTemplate.AllowColumnChooser = false;
             this.dataPropietario.MasterTemplate.AllowColumnReorder = false;
             this.dataPropietario.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewDecimalColumn15.DataType = typeof(int);
-            gridViewDecimalColumn15.EnableExpressionEditor = false;
-            gridViewDecimalColumn15.FieldName = "IdProducto";
-            gridViewDecimalColumn15.HeaderText = "Codigo";
-            gridViewDecimalColumn15.IsAutoGenerated = true;
-            gridViewDecimalColumn15.Name = "IdProducto";
-            gridViewDecimalColumn15.Width = 107;
-            gridViewTextBoxColumn15.EnableExpressionEditor = false;
-            gridViewTextBoxColumn15.FieldName = "Producto";
-            gridViewTextBoxColumn15.HeaderText = "Producto";
-            gridViewTextBoxColumn15.IsAutoGenerated = true;
-            gridViewTextBoxColumn15.Name = "Producto";
-            gridViewTextBoxColumn15.Width = 396;
-            gridViewDecimalColumn16.DataType = typeof(int);
-            gridViewDecimalColumn16.EnableExpressionEditor = false;
-            gridViewDecimalColumn16.FieldName = "IdUnidad";
-            gridViewDecimalColumn16.HeaderText = "IdUnidad";
-            gridViewDecimalColumn16.IsAutoGenerated = true;
-            gridViewDecimalColumn16.IsVisible = false;
-            gridViewDecimalColumn16.Name = "IdUnidad";
-            gridViewDecimalColumn16.Width = 151;
-            gridViewTextBoxColumn16.EnableExpressionEditor = false;
-            gridViewTextBoxColumn16.FieldName = "Unidad";
-            gridViewTextBoxColumn16.HeaderText = "Unidad";
-            gridViewTextBoxColumn16.IsAutoGenerated = true;
-            gridViewTextBoxColumn16.Name = "Unidad";
-            gridViewTextBoxColumn16.Width = 177;
+            gridViewDecimalColumn5.AllowGroup = false;
+            gridViewDecimalColumn5.AllowResize = false;
+            gridViewDecimalColumn5.AllowSort = false;
+            gridViewDecimalColumn5.DataType = typeof(int);
+            gridViewDecimalColumn5.EnableExpressionEditor = false;
+            gridViewDecimalColumn5.FieldName = "IdProducto";
+            gridViewDecimalColumn5.HeaderText = "Codigo";
+            gridViewDecimalColumn5.IsAutoGenerated = true;
+            gridViewDecimalColumn5.Name = "IdProducto";
+            gridViewDecimalColumn5.ReadOnly = true;
+            gridViewDecimalColumn5.Width = 89;
+            gridViewTextBoxColumn7.AllowGroup = false;
+            gridViewTextBoxColumn7.AllowResize = false;
+            gridViewTextBoxColumn7.AllowSort = false;
+            gridViewTextBoxColumn7.EnableExpressionEditor = false;
+            gridViewTextBoxColumn7.FieldName = "Producto";
+            gridViewTextBoxColumn7.HeaderText = "Producto";
+            gridViewTextBoxColumn7.IsAutoGenerated = true;
+            gridViewTextBoxColumn7.Name = "Producto";
+            gridViewTextBoxColumn7.ReadOnly = true;
+            gridViewTextBoxColumn7.Width = 313;
+            gridViewDecimalColumn6.AllowGroup = false;
+            gridViewDecimalColumn6.AllowSort = false;
+            gridViewDecimalColumn6.DataType = typeof(int);
+            gridViewDecimalColumn6.EnableExpressionEditor = false;
+            gridViewDecimalColumn6.FieldName = "IdUnidad";
+            gridViewDecimalColumn6.HeaderText = "IdUnidad";
+            gridViewDecimalColumn6.IsAutoGenerated = true;
+            gridViewDecimalColumn6.IsVisible = false;
+            gridViewDecimalColumn6.Name = "IdUnidad";
+            gridViewDecimalColumn6.ReadOnly = true;
+            gridViewDecimalColumn6.Width = 151;
+            gridViewTextBoxColumn8.AllowGroup = false;
+            gridViewTextBoxColumn8.AllowSort = false;
+            gridViewTextBoxColumn8.DataType = typeof(float);
+            gridViewTextBoxColumn8.EnableExpressionEditor = false;
+            gridViewTextBoxColumn8.FormatInfo = new System.Globalization.CultureInfo("es-DO");
+            gridViewTextBoxColumn8.HeaderText = "Precio";
+            gridViewTextBoxColumn8.Name = "Precio";
+            gridViewTextBoxColumn8.Width = 198;
+            gridViewTextBoxColumn9.AllowResize = false;
+            gridViewTextBoxColumn9.AllowSort = false;
+            gridViewTextBoxColumn9.EnableExpressionEditor = false;
+            gridViewTextBoxColumn9.FieldName = "Unidad";
+            gridViewTextBoxColumn9.HeaderText = "Unidad";
+            gridViewTextBoxColumn9.IsAutoGenerated = true;
+            gridViewTextBoxColumn9.Name = "Unidad";
+            gridViewTextBoxColumn9.ReadOnly = true;
+            gridViewTextBoxColumn9.Width = 80;
             this.dataPropietario.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewDecimalColumn15,
-            gridViewTextBoxColumn15,
-            gridViewDecimalColumn16,
-            gridViewTextBoxColumn16});
+            gridViewDecimalColumn5,
+            gridViewTextBoxColumn7,
+            gridViewDecimalColumn6,
+            gridViewTextBoxColumn8,
+            gridViewTextBoxColumn9});
             this.dataPropietario.MasterTemplate.DataSource = this.productoBindingSource;
             this.dataPropietario.MasterTemplate.EnableAlternatingRowColor = true;
             this.dataPropietario.MasterTemplate.EnableGrouping = false;
             this.dataPropietario.MasterTemplate.EnableSorting = false;
+            this.dataPropietario.MasterTemplate.SelectionMode = Telerik.WinControls.UI.GridViewSelectionMode.CellSelect;
             this.dataPropietario.MasterTemplate.ShowRowHeaderColumn = false;
-            this.dataPropietario.MasterTemplate.ViewDefinition = tableViewDefinition8;
+            this.dataPropietario.MasterTemplate.ViewDefinition = tableViewDefinition3;
             this.dataPropietario.Name = "dataPropietario";
-            this.dataPropietario.ReadOnly = true;
             this.dataPropietario.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dataPropietario.Size = new System.Drawing.Size(677, 427);
             this.dataPropietario.TabIndex = 0;
@@ -203,34 +224,24 @@
             this.radPanel1.Location = new System.Drawing.Point(12, 12);
             this.radPanel1.Name = "radPanel1";
             this.radPanel1.Size = new System.Drawing.Size(528, 117);
-            this.radPanel1.TabIndex = 12;
+            this.radPanel1.TabIndex = 15;
             this.radPanel1.ThemeName = "VisualStudio2012Light";
             // 
             // cbbPersonal1
             // 
             this.cbbPersonal1.Correo = false;
-            this.cbbPersonal1.DataSource = this.unidadBindingSource;
+            this.cbbPersonal1.DataSource = this.categoriaBindingSource;
             this.cbbPersonal1.DisplayMember = "Descripcion";
             this.cbbPersonal1.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.cbbPersonal1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbPersonal1.Limpiar = false;
-            this.cbbPersonal1.Location = new System.Drawing.Point(87, 84);
+            this.cbbPersonal1.Location = new System.Drawing.Point(87, 54);
             this.cbbPersonal1.Name = "cbbPersonal1";
-            this.cbbPersonal1.Size = new System.Drawing.Size(125, 25);
+            this.cbbPersonal1.Size = new System.Drawing.Size(253, 25);
             this.cbbPersonal1.TabIndex = 6;
             this.cbbPersonal1.ThemeName = "VisualStudio2012Light";
             this.cbbPersonal1.Validar = false;
-            this.cbbPersonal1.ValueMember = "IdUnidad";
-            // 
-            // unidadBindingSource
-            // 
-            this.unidadBindingSource.DataMember = "Unidad";
-            this.unidadBindingSource.DataSource = this.despachoDataSet;
-            // 
-            // despachoDataSet
-            // 
-            this.despachoDataSet.DataSetName = "DespachoDataSet";
-            this.despachoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.cbbPersonal1.ValueMember = "IdCategoria";
             // 
             // txtCodigo
             // 
@@ -249,7 +260,7 @@
             this.txtDescripcion.Correo = false;
             this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescripcion.Limpiar = true;
-            this.txtDescripcion.Location = new System.Drawing.Point(87, 54);
+            this.txtDescripcion.Location = new System.Drawing.Point(87, 85);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(125, 24);
             this.txtDescripcion.TabIndex = 5;
@@ -272,18 +283,18 @@
             this.radLabel3.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.radLabel3.Location = new System.Drawing.Point(30, 87);
             this.radLabel3.Name = "radLabel3";
-            this.radLabel3.Size = new System.Drawing.Size(51, 21);
+            this.radLabel3.Size = new System.Drawing.Size(44, 21);
             this.radLabel3.TabIndex = 1;
-            this.radLabel3.Text = "Unidad";
+            this.radLabel3.Text = "Precio";
             // 
             // radLabel2
             // 
             this.radLabel2.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.radLabel2.Location = new System.Drawing.Point(3, 58);
             this.radLabel2.Name = "radLabel2";
-            this.radLabel2.Size = new System.Drawing.Size(78, 21);
+            this.radLabel2.Size = new System.Drawing.Size(65, 21);
             this.radLabel2.TabIndex = 1;
-            this.radLabel2.Text = "Descripción";
+            this.radLabel2.Text = "Categoria";
             // 
             // radSeparator1
             // 
@@ -303,9 +314,19 @@
             this.radLabel1.Text = "Codigo";
             this.radLabel1.ThemeName = "VisualStudio2012Light";
             // 
-            // unidadTableAdapter
+            // despachoDataSet
             // 
-            this.unidadTableAdapter.ClearBeforeFill = true;
+            this.despachoDataSet.DataSetName = "DespachoDataSet";
+            this.despachoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // categoriaBindingSource
+            // 
+            this.categoriaBindingSource.DataMember = "Categoria";
+            this.categoriaBindingSource.DataSource = this.despachoDataSet;
+            // 
+            // categoriaTableAdapter
+            // 
+            this.categoriaTableAdapter.ClearBeforeFill = true;
             // 
             // productoBindingSource
             // 
@@ -316,28 +337,22 @@
             // 
             this.productoTableAdapter.ClearBeforeFill = true;
             // 
-            // errorProvider1
+            // MantenimientoPorCategoria
             // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // Producto
-            // 
-            this.AcceptButton = this.btGuardar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(705, 594);
+            this.ClientSize = new System.Drawing.Size(708, 673);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.radGroupBox1);
             this.Controls.Add(this.radPanel1);
-            this.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.Name = "Producto";
+            this.Name = "MantenimientoPorCategoria";
             // 
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
-            this.Text = "Mantenimiento de producto";
+            this.Text = "MantenimientoPorCategoria";
             this.ThemeName = "VisualStudio2012Light";
-            this.Load += new System.EventHandler(this.Producto_Load);
+            this.Load += new System.EventHandler(this.MantenimientoPorCategoria_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btCancelar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btGuardar)).EndInit();
@@ -349,8 +364,6 @@
             this.radPanel1.ResumeLayout(false);
             this.radPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbbPersonal1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.unidadBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.despachoDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chEstado)).EndInit();
@@ -358,8 +371,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.despachoDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -367,12 +381,14 @@
 
         #endregion
 
+        private Telerik.WinControls.Themes.VisualStudio2012LightTheme visualStudio2012LightTheme1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private Telerik.WinControls.UI.RadButton btCancelar;
         private Telerik.WinControls.UI.RadButton btGuardar;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
         private Telerik.WinControls.UI.RadGridView dataPropietario;
         private Telerik.WinControls.UI.RadPanel radPanel1;
+        private Negocios.Componentes.CbbPersonal cbbPersonal1;
         private Negocios.Componentes.TextPersonal txtCodigo;
         private Negocios.Componentes.TextPersonal txtDescripcion;
         private Telerik.WinControls.UI.RadToggleSwitch chEstado;
@@ -380,13 +396,10 @@
         private Telerik.WinControls.UI.RadLabel radLabel2;
         private Telerik.WinControls.UI.RadSeparator radSeparator1;
         private Telerik.WinControls.UI.RadLabel radLabel1;
-        private Telerik.WinControls.Themes.VisualStudio2012LightTheme visualStudio2012LightTheme1;
-        private Negocios.Componentes.CbbPersonal cbbPersonal1;
         private DespachoDataSet despachoDataSet;
-        private System.Windows.Forms.BindingSource unidadBindingSource;
-        private DespachoDataSetTableAdapters.UnidadTableAdapter unidadTableAdapter;
+        private System.Windows.Forms.BindingSource categoriaBindingSource;
+        private DespachoDataSetTableAdapters.CategoriaTableAdapter categoriaTableAdapter;
         private System.Windows.Forms.BindingSource productoBindingSource;
         private DespachoDataSetTableAdapters.ProductoTableAdapter productoTableAdapter;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

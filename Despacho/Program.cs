@@ -14,7 +14,7 @@ namespace Despacho
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Vistas.Propietario());
+            Application.Run(new Vistas.MantenimientoPorCategoria());
         }
     }
 }
