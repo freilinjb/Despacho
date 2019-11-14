@@ -50,6 +50,8 @@
       <HintPath>..\lib\RCWF\2019.2.618.40\Telerik.WinControls.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Telerik.WinControls.GridView, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.VisualStudio2012Light, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.UI, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
       <HintPath>..\lib\RCWF\2019.2.618.40\Telerik.WinControls.UI.dll</HintPath>
       <Private>True</Private>
@@ -60,12 +62,42 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DespachoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DespachoDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="RadForm1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RadForm1.Designer.cs">
       <DependentUpon>RadForm1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Categoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Categoria.Designer.cs">
+      <DependentUpon>Categoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Producto.Designer.cs">
+      <DependentUpon>Producto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Propietario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Propietario.Designer.cs">
+      <DependentUpon>Propietario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Vehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Vehiculo.Designer.cs">
+      <DependentUpon>Vehiculo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="RadForm1.resx">
       <DependentUpon>RadForm1.cs</DependentUpon>
     </EmbeddedResource>
@@ -80,7 +112,30 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Vistas\Categoria.resx">
+      <DependentUpon>Categoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Producto.resx">
+      <DependentUpon>Producto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Propietario.resx">
+      <DependentUpon>Propietario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Vehiculo.resx">
+      <DependentUpon>Vehiculo.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="app.manifest" />
+    <None Include="DespachoDataSet.xsc">
+      <DependentUpon>DespachoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DespachoDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DespachoDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DespachoDataSet.xss">
+      <DependentUpon>DespachoDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -96,6 +151,10 @@
   </ItemGroup>
   <ItemGroup>
     <!--sirinie -->
+    <ProjectReference Include="..\Negocios\Negocios.csproj">
+      <Project>{82b6b79c-13b9-433d-93da-317695362957}</Project>
+      <Name>Negocios</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
